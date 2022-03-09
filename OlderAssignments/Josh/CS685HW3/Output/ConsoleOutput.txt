@@ -1,0 +1,120 @@
+Crawl started at 2/12/2022 9:51:55 PM
+Crawl finished at 2/12/2022 10:17:25 PM
+Crawl duration: 00:25:29.9399690
+Succesfully Crawled: 6959
+
+Crawled with http errors: 219
+
+HTTP Error Counts:
+[403, 10]
+[404, 168]
+[301, 18]
+[503, 1]
+[UNSPECIFIED, 21]
+[500, 1]
+
+Total Crawled: 7178
+
+Filetypes encountered:
+
+[xml, 51]
+[ico, 52]
+[css, 43]
+[svg, 4]
+[jpg, 4165]
+[js, 512]
+[mp4, 70]
+[png, 648]
+[JPG, 135]
+[jpeg, 157]
+[pdf, 1191]
+[php, 15]
+[PNG, 34]
+[docx, 11]
+[gif, 63]
+[xls, 2]
+[ppt, 7]
+[ppsx, 3]
+[xlsx, 8]
+[htm, 29]
+[PDF, 3]
+[m4v, 8]
+[pptx, 15]
+[doc, 6]
+[mp3, 3]
+[html, 1]
+[JPEG, 2]
+[xlsm, 1]
+[mov, 1]
+[pps, 1]
+
+Subdomains:
+
+http://www.engr.uky.edu
+https://cat.engr.uky.edu
+http://vac.engr.uky.edu
+http://aiaa.engr.uky.edu
+http://ukaiche.engr.uky.edu
+http://railcats.engr.uky.edu
+http://asce.engr.uky.edu
+http://esc.engr.uky.edu
+http://ewb.engr.uky.edu
+http://sae.engr.uky.edu
+http://ieee.engr.uky.edu
+https://munugamma.engr.uky.edu
+http://nsbe.engr.uky.edu
+http://solarcar.engr.uky.edu
+https://spacelex.engr.uky.edu
+http://tbp.engr.uky.edu
+http://usrc.engr.uky.edu
+https://educelab.engr.uky.edu
+http://nasa.engr.uky.edu
+https://bioptics.engr.uky.edu
+http://hmbl.engr.uky.edu
+http://chapelinlab.engr.uky.edu
+http://nm.engr.uky.edu
+http://tissueoptics.engr.uky.edu
+http://engr.uky.edu
+https://web.engr.uky.edu
+https://beckdt.engr.uky.edu
+http://cheng.engr.uky.edu
+http://chwatko.engr.uky.edu
+http://web.engr.uky.edu
+http://givens.engr.uky.edu
+http://rottmann.engr.uky.edu
+http://wilson.engr.uky.edu
+http://byrne.engr.uky.edu
+http://courses.engr.uky.edu
+http://kgpennell.engr.uky.edu
+http://superfund.engr.uky.edu
+http://silvestri.engr.uky.edu
+http://jihyebae.engr.uky.edu
+http://ampere.engr.uky.edu
+http://sparklab.engr.uky.edu
+http://salehi.engr.uky.edu
+http://ithakkar.engr.uky.edu
+http://manufai.engr.uky.edu
+http://bxie.engr.uky.edu
+http://berry.engr.uky.edu
+http://megroup.engr.uky.edu
+https://ctfl.engr.uky.edu
+http://agioutantis.engr.uky.edu
+http://ukert.engr.uky.edu
+https://engr.uky.edu
+https://nasa.engr.uky.edu
+http://w2.engr.uky.edu
+https://amli.engr.uky.edu
+https://sparklab.engr.uky.edu
+http://emc.engr.uky.edu
+https://w2.engr.uky.edu
+http://cat.engr.uky.edu
+http://ssl.engr.uky.edu
+https://mace.engr.uky.edu
+http://pem.engr.uky.edu
+http://igert.engr.uky.edu
+http://neuroengworkshop.engr.uky.edu
+http://www.crms.engr.uky.edu
+https://events.engr.uky.edu
+http://www.cs.engr.uky.edu
+
+Subdomain Count: 66

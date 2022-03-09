@@ -1,0 +1,722 @@
+[
+ {
+  "0": [
+   {
+    "node": "Home",
+    "rank": 0.125
+   },
+   {
+    "node": "About",
+    "rank": 0.125
+   },
+   {
+    "node": "Product",
+    "rank": 0.125
+   },
+   {
+    "node": "Links",
+    "rank": 0.125
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.125
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.125
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.125
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.125
+   }
+  ]
+ },
+ {
+  "0.05": [
+   {
+    "node": "Home",
+    "rank": 0.13547591118706595
+   },
+   {
+    "node": "About",
+    "rank": 0.1240846575701678
+   },
+   {
+    "node": "Product",
+    "rank": 0.1240846575701678
+   },
+   {
+    "node": "Links",
+    "rank": 0.1240846575701678
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.12306752902560762
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.12306752902560762
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.12306752902560762
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.12306752902560762
+   }
+  ]
+ },
+ {
+  "0.1": [
+   {
+    "node": "Home",
+    "rank": 0.14570087861689826
+   },
+   {
+    "node": "About",
+    "rank": 0.12340754412615748
+   },
+   {
+    "node": "Product",
+    "rank": 0.12340754412615748
+   },
+   {
+    "node": "Links",
+    "rank": 0.12340754412615748
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.12101912225115748
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.12101912225115748
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.12101912225115748
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.12101912225115748
+   }
+  ]
+ },
+ {
+  "0.15000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.15573734726104738
+   },
+   {
+    "node": "About",
+    "rank": 0.12295096790313723
+   },
+   {
+    "node": "Product",
+    "rank": 0.12295096790313723
+   },
+   {
+    "node": "Links",
+    "rank": 0.12295096790313723
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.11885243725738527
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.11885243725738527
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.11885243725738527
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.11885243725738527
+   }
+  ]
+ },
+ {
+  "0.2": [
+   {
+    "node": "Home",
+    "rank": 0.16564464012345695
+   },
+   {
+    "node": "About",
+    "rank": 0.12269919320987663
+   },
+   {
+    "node": "Product",
+    "rank": 0.12269919320987663
+   },
+   {
+    "node": "Links",
+    "rank": 0.12269919320987663
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.11656444506172847
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.11656444506172847
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.11656444506172847
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.11656444506172847
+   }
+  ]
+ },
+ {
+  "0.25": [
+   {
+    "node": "Home",
+    "rank": 0.17547109003328248
+   },
+   {
+    "node": "About",
+    "rank": 0.12264176084824793
+   },
+   {
+    "node": "Product",
+    "rank": 0.12264176084824793
+   },
+   {
+    "node": "Links",
+    "rank": 0.12264176084824793
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.1141509068554934
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.1141509068554934
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.1141509068554934
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.1141509068554934
+   }
+  ]
+ },
+ {
+  "0.3": [
+   {
+    "node": "Home",
+    "rank": 0.18526867894509266
+   },
+   {
+    "node": "About",
+    "rank": 0.12276751762341301
+   },
+   {
+    "node": "Product",
+    "rank": 0.12276751762341301
+   },
+   {
+    "node": "Links",
+    "rank": 0.12276751762341301
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.11160719204616693
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.11160719204616693
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.11160719204616693
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.11160719204616693
+   }
+  ]
+ },
+ {
+  "0.35": [
+   {
+    "node": "Home",
+    "rank": 0.1950759762361898
+   },
+   {
+    "node": "About",
+    "rank": 0.12307175586174263
+   },
+   {
+    "node": "Product",
+    "rank": 0.12307175586174263
+   },
+   {
+    "node": "Links",
+    "rank": 0.12307175586174263
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.10892718904464559
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.10892718904464559
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.10892718904464559
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.10892718904464559
+   }
+  ]
+ },
+ {
+  "0.39999999999999997": [
+   {
+    "node": "Home",
+    "rank": 0.2049436408007464
+   },
+   {
+    "node": "About",
+    "rank": 0.12354577596224975
+   },
+   {
+    "node": "Product",
+    "rank": 0.12354577596224975
+   },
+   {
+    "node": "Links",
+    "rank": 0.12354577596224975
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.10610475782812628
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.10610475782812628
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.10610475782812628
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.10610475782812628
+   }
+  ]
+ },
+ {
+  "0.44999999999999996": [
+   {
+    "node": "Home",
+    "rank": 0.21490394592961115
+   },
+   {
+    "node": "About",
+    "rank": 0.12418959447382644
+   },
+   {
+    "node": "Product",
+    "rank": 0.12418959447382644
+   },
+   {
+    "node": "Links",
+    "rank": 0.12418959447382644
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.10313181766222747
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.10313181766222747
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.10313181766222747
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.10313181766222747
+   }
+  ]
+ },
+ {
+  "0.49999999999999994": [
+   {
+    "node": "Home",
+    "rank": 0.22499782574817828
+   },
+   {
+    "node": "About",
+    "rank": 0.12500089847862014
+   },
+   {
+    "node": "Product",
+    "rank": 0.12500089847862014
+   },
+   {
+    "node": "Links",
+    "rank": 0.12500089847862014
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.09999986970399007
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.09999986970399007
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.09999986970399007
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.09999986970399007
+   }
+  ]
+ },
+ {
+  "0.5499999999999999": [
+   {
+    "node": "Home",
+    "rank": 0.23527113158289772
+   },
+   {
+    "node": "About",
+    "rank": 0.12597674210150162
+   },
+   {
+    "node": "Product",
+    "rank": 0.12597674210150162
+   },
+   {
+    "node": "Links",
+    "rank": 0.12597674210150162
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.09669966052814946
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.09669966052814946
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.09669966052814946
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.09669966052814946
+   }
+  ]
+ },
+ {
+  "0.6": [
+   {
+    "node": "Home",
+    "rank": 0.24576014599510787
+   },
+   {
+    "node": "About",
+    "rank": 0.12711970437349465
+   },
+   {
+    "node": "Product",
+    "rank": 0.12711970437349465
+   },
+   {
+    "node": "Links",
+    "rank": 0.12711970437349465
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.09322018522110206
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.09322018522110206
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.09322018522110206
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.09322018522110206
+   }
+  ]
+ },
+ {
+  "0.65": [
+   {
+    "node": "Home",
+    "rank": 0.2565116805590665
+   },
+   {
+    "node": "About",
+    "rank": 0.12842978168116034
+   },
+   {
+    "node": "Product",
+    "rank": 0.12842978168116034
+   },
+   {
+    "node": "Links",
+    "rank": 0.12842978168116034
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.0895497435993632
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.0895497435993632
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.0895497435993632
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.0895497435993632
+   }
+  ]
+ },
+ {
+  "0.7000000000000001": [
+   {
+    "node": "Home",
+    "rank": 0.26755359748406443
+   },
+   {
+    "node": "About",
+    "rank": 0.1299167974287674
+   },
+   {
+    "node": "Product",
+    "rank": 0.1299167974287674
+   },
+   {
+    "node": "Links",
+    "rank": 0.1299167974287674
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.08567400255740816
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.08567400255740816
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.08567400255740816
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.08567400255740816
+   }
+  ]
+ },
+ {
+  "0.7500000000000001": [
+   {
+    "node": "Home",
+    "rank": 0.2789446416737897
+   },
+   {
+    "node": "About",
+    "rank": 0.13158007415432418
+   },
+   {
+    "node": "Product",
+    "rank": 0.13158007415432418
+   },
+   {
+    "node": "Links",
+    "rank": 0.13158007415432418
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.08157878396580952
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.08157878396580952
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.08157878396580952
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.08157878396580952
+   }
+  ]
+ },
+ {
+  "0.8000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.2907333737547917
+   },
+   {
+    "node": "About",
+    "rank": 0.133425711432943
+   },
+   {
+    "node": "Product",
+    "rank": 0.133425711432943
+   },
+   {
+    "node": "Links",
+    "rank": 0.133425711432943
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.07724737298659479
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.07724737298659479
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.07724737298659479
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.07724737298659479
+   }
+  ]
+ },
+ {
+  "0.8500000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.30295257330463266
+   },
+   {
+    "node": "About",
+    "rank": 0.13546925790077657
+   },
+   {
+    "node": "Product",
+    "rank": 0.13546925790077657
+   },
+   {
+    "node": "Links",
+    "rank": 0.13546925790077657
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.07265991324825936
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.07265991324825936
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.07265991324825936
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.07265991324825936
+   }
+  ]
+ },
+ {
+  "0.9000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.3156748804235367
+   },
+   {
+    "node": "About",
+    "rank": 0.1377131395152924
+   },
+   {
+    "node": "Product",
+    "rank": 0.1377131395152924
+   },
+   {
+    "node": "Links",
+    "rank": 0.1377131395152924
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.0677964252576455
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.0677964252576455
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.0677964252576455
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.0677964252576455
+   }
+  ]
+ },
+ {
+  "0.9500000000000003": [
+   {
+    "node": "Home",
+    "rank": 0.3289599584735103
+   },
+   {
+    "node": "About",
+    "rank": 0.14016898990123855
+   },
+   {
+    "node": "Product",
+    "rank": 0.14016898990123855
+   },
+   {
+    "node": "Links",
+    "rank": 0.14016898990123855
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.06263326795569399
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.06263326795569399
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.06263326795569399
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.06263326795569399
+   }
+  ]
+ }
+]

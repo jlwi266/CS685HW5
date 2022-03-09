@@ -1,0 +1,1042 @@
+[
+ {
+  "0": [
+   {
+    "node": "Home",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "About",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Product",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Links",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Review A",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Review B",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Review C",
+    "rank": 0.08333333333333336
+   },
+   {
+    "node": "Review D",
+    "rank": 0.08333333333333336
+   }
+  ]
+ },
+ {
+  "0.05": [
+   {
+    "node": "Home",
+    "rank": 0.10539517446844984
+   },
+   {
+    "node": "About",
+    "rank": 0.0822728350765889
+   },
+   {
+    "node": "Product",
+    "rank": 0.0822728350765889
+   },
+   {
+    "node": "Links",
+    "rank": 0.0822728350765889
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "Review A",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "Review B",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "Review C",
+    "rank": 0.08097329003772287
+   },
+   {
+    "node": "Review D",
+    "rank": 0.08097329003772287
+   }
+  ]
+ },
+ {
+  "0.1": [
+   {
+    "node": "Home",
+    "rank": 0.126303125946248
+   },
+   {
+    "node": "About",
+    "rank": 0.08182759518366106
+   },
+   {
+    "node": "Product",
+    "rank": 0.08182759518366106
+   },
+   {
+    "node": "Links",
+    "rank": 0.08182759518366106
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "Review A",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "Review B",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "Review C",
+    "rank": 0.07852676106284613
+   },
+   {
+    "node": "Review D",
+    "rank": 0.07852676106284613
+   }
+  ]
+ },
+ {
+  "0.15000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.1461809065007716
+   },
+   {
+    "node": "About",
+    "rank": 0.08194241722608026
+   },
+   {
+    "node": "Product",
+    "rank": 0.08194241722608026
+   },
+   {
+    "node": "Links",
+    "rank": 0.08194241722608026
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "Review A",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "Review B",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "Review C",
+    "rank": 0.07599898022762346
+   },
+   {
+    "node": "Review D",
+    "rank": 0.07599898022762346
+   }
+  ]
+ },
+ {
+  "0.2": [
+   {
+    "node": "Home",
+    "rank": 0.1651378119381832
+   },
+   {
+    "node": "About",
+    "rank": 0.08256871725470935
+   },
+   {
+    "node": "Product",
+    "rank": 0.08256871725470935
+   },
+   {
+    "node": "Links",
+    "rank": 0.08256871725470935
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "Review A",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "Review B",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "Review C",
+    "rank": 0.0733945045372111
+   },
+   {
+    "node": "Review D",
+    "rank": 0.0733945045372111
+   }
+  ]
+ },
+ {
+  "0.25": [
+   {
+    "node": "Home",
+    "rank": 0.18326808537645167
+   },
+   {
+    "node": "About",
+    "rank": 0.08366481204301725
+   },
+   {
+    "node": "Product",
+    "rank": 0.08366481204301725
+   },
+   {
+    "node": "Links",
+    "rank": 0.08366481204301725
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "Review A",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "Review B",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "Review C",
+    "rank": 0.07071718481181206
+   },
+   {
+    "node": "Review D",
+    "rank": 0.07071718481181206
+   }
+  ]
+ },
+ {
+  "0.3": [
+   {
+    "node": "Home",
+    "rank": 0.20065065410699598
+   },
+   {
+    "node": "About",
+    "rank": 0.0851960399176955
+   },
+   {
+    "node": "Product",
+    "rank": 0.0851960399176955
+   },
+   {
+    "node": "Links",
+    "rank": 0.0851960399176955
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "Review A",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "Review B",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "Review C",
+    "rank": 0.06797015326748973
+   },
+   {
+    "node": "Review D",
+    "rank": 0.06797015326748973
+   }
+  ]
+ },
+ {
+  "0.35": [
+   {
+    "node": "Home",
+    "rank": 0.21736617000937092
+   },
+   {
+    "node": "About",
+    "rank": 0.0871269793898496
+   },
+   {
+    "node": "Product",
+    "rank": 0.0871269793898496
+   },
+   {
+    "node": "Links",
+    "rank": 0.0871269793898496
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "Review A",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "Review B",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "Review C",
+    "rank": 0.06515661147763505
+   },
+   {
+    "node": "Review D",
+    "rank": 0.06515661147763505
+   }
+  ]
+ },
+ {
+  "0.39999999999999997": [
+   {
+    "node": "Home",
+    "rank": 0.23346973621815162
+   },
+   {
+    "node": "About",
+    "rank": 0.08943390509312986
+   },
+   {
+    "node": "Product",
+    "rank": 0.08943390509312986
+   },
+   {
+    "node": "Links",
+    "rank": 0.08943390509312986
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "Review A",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "Review B",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "Review C",
+    "rank": 0.06227856856280739
+   },
+   {
+    "node": "Review D",
+    "rank": 0.06227856856280739
+   }
+  ]
+ },
+ {
+  "0.44999999999999996": [
+   {
+    "node": "Home",
+    "rank": 0.24902889007939047
+   },
+   {
+    "node": "About",
+    "rank": 0.09208744237681767
+   },
+   {
+    "node": "Product",
+    "rank": 0.09208744237681767
+   },
+   {
+    "node": "Links",
+    "rank": 0.09208744237681767
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "Review A",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "Review B",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "Review C",
+    "rank": 0.059338597848769506
+   },
+   {
+    "node": "Review D",
+    "rank": 0.059338597848769506
+   }
+  ]
+ },
+ {
+  "0.49999999999999994": [
+   {
+    "node": "Home",
+    "rank": 0.2640853469259308
+   },
+   {
+    "node": "About",
+    "rank": 0.0950700389755309
+   },
+   {
+    "node": "Product",
+    "rank": 0.0950700389755309
+   },
+   {
+    "node": "Links",
+    "rank": 0.0950700389755309
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "Review A",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "Review B",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "Review C",
+    "rank": 0.05633806701843436
+   },
+   {
+    "node": "Review D",
+    "rank": 0.05633806701843436
+   }
+  ]
+ },
+ {
+  "0.5499999999999999": [
+   {
+    "node": "Home",
+    "rank": 0.2786872050221631
+   },
+   {
+    "node": "About",
+    "rank": 0.09836125836053676
+   },
+   {
+    "node": "Product",
+    "rank": 0.09836125836053676
+   },
+   {
+    "node": "Links",
+    "rank": 0.09836125836053676
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "Review A",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "Review B",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "Review C",
+    "rank": 0.05327862748702828
+   },
+   {
+    "node": "Review D",
+    "rank": 0.05327862748702828
+   }
+  ]
+ },
+ {
+  "0.6": [
+   {
+    "node": "Home",
+    "rank": 0.29288245683201025
+   },
+   {
+    "node": "About",
+    "rank": 0.10194074381688394
+   },
+   {
+    "node": "Product",
+    "rank": 0.10194074381688394
+   },
+   {
+    "node": "Links",
+    "rank": 0.10194074381688394
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "Review A",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "Review B",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "Review C",
+    "rank": 0.050161913964667064
+   },
+   {
+    "node": "Review D",
+    "rank": 0.050161913964667064
+   }
+  ]
+ },
+ {
+  "0.65": [
+   {
+    "node": "Home",
+    "rank": 0.3066985275691685
+   },
+   {
+    "node": "About",
+    "rank": 0.10579756363249083
+   },
+   {
+    "node": "Product",
+    "rank": 0.10579756363249083
+   },
+   {
+    "node": "Links",
+    "rank": 0.10579756363249083
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "Review A",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "Review B",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "Review C",
+    "rank": 0.04698859769166978
+   },
+   {
+    "node": "Review D",
+    "rank": 0.04698859769166978
+   }
+  ]
+ },
+ {
+  "0.7000000000000001": [
+   {
+    "node": "Home",
+    "rank": 0.32017295303191096
+   },
+   {
+    "node": "About",
+    "rank": 0.10991620192664311
+   },
+   {
+    "node": "Product",
+    "rank": 0.10991620192664311
+   },
+   {
+    "node": "Links",
+    "rank": 0.10991620192664311
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "Review A",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "Review B",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "Review C",
+    "rank": 0.04375980514851988
+   },
+   {
+    "node": "Review D",
+    "rank": 0.04375980514851988
+   }
+  ]
+ },
+ {
+  "0.7500000000000001": [
+   {
+    "node": "Home",
+    "rank": 0.33333598074032456
+   },
+   {
+    "node": "About",
+    "rank": 0.11428450526283898
+   },
+   {
+    "node": "Product",
+    "rank": 0.11428450526283898
+   },
+   {
+    "node": "Links",
+    "rank": 0.11428450526283898
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "Review A",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "Review B",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "Review C",
+    "rank": 0.04047631293389478
+   },
+   {
+    "node": "Review D",
+    "rank": 0.04047631293389478
+   }
+  ]
+ },
+ {
+  "0.8000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.3462088998798898
+   },
+   {
+    "node": "About",
+    "rank": 0.11889444622769572
+   },
+   {
+    "node": "Product",
+    "rank": 0.11889444622769572
+   },
+   {
+    "node": "Links",
+    "rank": 0.11889444622769572
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "Review A",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "Review B",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "Review C",
+    "rank": 0.03713847017962777
+   },
+   {
+    "node": "Review D",
+    "rank": 0.03713847017962777
+   }
+  ]
+ },
+ {
+  "0.8500000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.3588330420333781
+   },
+   {
+    "node": "About",
+    "rank": 0.12372888024410332
+   },
+   {
+    "node": "Product",
+    "rank": 0.12372888024410332
+   },
+   {
+    "node": "Links",
+    "rank": 0.12372888024410332
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "Review A",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "Review B",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "Review C",
+    "rank": 0.033747539654289005
+   },
+   {
+    "node": "Review D",
+    "rank": 0.033747539654289005
+   }
+  ]
+ },
+ {
+  "0.9000000000000002": [
+   {
+    "node": "Home",
+    "rank": 0.37120984266923995
+   },
+   {
+    "node": "About",
+    "rank": 0.12878891935718803
+   },
+   {
+    "node": "Product",
+    "rank": 0.12878891935718803
+   },
+   {
+    "node": "Links",
+    "rank": 0.12878891935718803
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "Review A",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "Review B",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "Review C",
+    "rank": 0.030302924907399255
+   },
+   {
+    "node": "Review D",
+    "rank": 0.030302924907399255
+   }
+  ]
+ },
+ {
+  "0.9500000000000003": [
+   {
+    "node": "Home",
+    "rank": 0.38338134623817954
+   },
+   {
+    "node": "About",
+    "rank": 0.13405716799589215
+   },
+   {
+    "node": "Product",
+    "rank": 0.13405716799589215
+   },
+   {
+    "node": "Links",
+    "rank": 0.13405716799589215
+   },
+   {
+    "node": "External Site A",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "External Site B",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "External Site C",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "External Site D",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "Review A",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "Review B",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "Review C",
+    "rank": 0.026805893721768018
+   },
+   {
+    "node": "Review D",
+    "rank": 0.026805893721768018
+   }
+  ]
+ }
+]

@@ -1,0 +1,10 @@
+{
+    "Home": ["About", "Product", "Links"],
+    "About": ["Home"],
+    "Product": ["Home"],
+    "Links": ["Home", "External Site A", "External Site B", "External Site C", "External Site D"],
+    "External Site A": [],
+    "External Site B": [],
+    "External Site C": [],
+    "External Site D": []
+}
