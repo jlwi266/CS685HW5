@@ -48,6 +48,70 @@ namespace CS685HW3
             return discoveredLinks;
         }
 
+        public Dictionary<string, int> GetTerms(string content, List<string> stopwords)
+        {
+            HtmlDocument doc = new HtmlDocument();
+            Dictionary<string, int> termCounts = new Dictionary<string, int>();
+
+            if(content != null)
+            {
+                doc.LoadHtml(content);
+
+                var pNodes = doc.DocumentNode.SelectNodes("//p/text()");
+                termCounts = processNodes(termCounts, pNodes, stopwords);
+
+                var h1Nodes = doc.DocumentNode.SelectNodes("//h1/text()");
+                termCounts = processNodes(termCounts, h1Nodes, stopwords);
+
+                var h2Nodes = doc.DocumentNode.SelectNodes("//h2/text()");
+                termCounts = processNodes(termCounts, h2Nodes, stopwords);
+
+                var h3Nodes = doc.DocumentNode.SelectNodes("//h3/text()");
+                termCounts = processNodes(termCounts, h3Nodes, stopwords);
+
+                var h4Nodes = doc.DocumentNode.SelectNodes("//h4/text()");
+                termCounts = processNodes(termCounts, h4Nodes, stopwords);
+
+                var h5Nodes = doc.DocumentNode.SelectNodes("//h5/text()");
+                termCounts = processNodes(termCounts, h5Nodes, stopwords);
+
+                var h6Nodes = doc.DocumentNode.SelectNodes("//h6/text()");
+                termCounts = processNodes(termCounts, h6Nodes, stopwords);
+            }
+
+            return termCounts;
+        }
+
+        public Dictionary<string, int> processNodes(Dictionary<string, int> termCounts, HtmlNodeCollection nodes, List<string> stopwords)
+        {
+            if(nodes != null)
+            {
+                foreach(var node in nodes)
+                {
+                    var terms = node.InnerText.Split();
+
+                    foreach(var term in terms)
+                    {
+                        if(!stopwords.Contains(term) && term.Trim() != "")
+                        {
+                            var nextTerm = term.Trim();
+
+                            if(termCounts.ContainsKey(nextTerm))
+                            {
+                                termCounts[nextTerm] += 1;
+                            }
+                            else
+                            {
+                                termCounts.Add(nextTerm, 1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return termCounts;
+        }
+
         public string CheckURL(string url)
         {
             Regex httpCheck = new Regex(@"^https?://");
@@ -168,6 +232,17 @@ namespace CS685HW3
                     || (frontierQueue.Contains("http://" + truncatedHost + uri.PathAndQuery))
                     || (frontierQueue.Contains("https://www." + truncatedHost + uri.PathAndQuery))
                     || (frontierQueue.Contains("http://www." + truncatedHost + uri.PathAndQuery)));
+        }
+
+        public bool CheckForDupedURL(string url, string target)
+        {
+            Uri uri = new Uri(url);
+
+            var truncatedHost = uri.Host.Replace("www.", "");
+            return (target == ("https://" + truncatedHost + uri.PathAndQuery))
+                    || (target == ("http://" + truncatedHost + uri.PathAndQuery))
+                    || (target == ("https://www." + truncatedHost + uri.PathAndQuery))
+                    || (target == ("http://www." + truncatedHost + uri.PathAndQuery));
         }
 
         public void PrintDictCounts(Dictionary<string, string> dict)

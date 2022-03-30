@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Net;
+using System.Text.Json;
+using System.Threading.Tasks;
+using HtmlAgilityPack;
 
 namespace CS685HW3
 {
@@ -13,12 +18,15 @@ namespace CS685HW3
             Helpers helpers = new Helpers();
 
             DateTime startTime = DateTime.Now;
-            helpers.PostStartTime(startTime);
+            //helpers.PostStartTime(startTime);
             Console.WriteLine("Crawl started at " + startTime);
 
             Dictionary<string, DateTime> visitedUrls = new Dictionary<string, DateTime>();
             Dictionary<string, string> foundFiles = new Dictionary<string, string>();
             Dictionary<string, string> httpErrors = new Dictionary<string, string>();
+            Dictionary<string, List<string>> webGraph = new Dictionary<string, List<string>>();
+            Dictionary<string,Dictionary<string,int>> invertedIndex = new Dictionary<string, Dictionary<string, int>>();
+            List<string> stopwords = File.ReadAllLines("./stopwords.txt").ToList();
             Queue<string> urlFrontier = new Queue<string>();
 
             urlFrontier.Enqueue(startUrl);
@@ -29,12 +37,13 @@ namespace CS685HW3
                 {
                     bool error = false;
                     string nextURL = urlFrontier.Dequeue();
+                    List<string> childLinks = new List<string>();
                     string nextContent = null;
 
                     try
                     {
                         nextContent = client.DownloadString(nextURL);
-                        Console.WriteLine("PARSE: " + nextURL + "\n");
+                        //Console.WriteLine("PARSE: " + nextURL + "\n");
                     }
                     catch(WebException ex)
                     {
@@ -44,57 +53,73 @@ namespace CS685HW3
 
                         if(res != null)
                         {
-                            Console.WriteLine((int)res.StatusCode + " ERROR AT " + nextURL + "\n");
+                            //Console.WriteLine((int)res.StatusCode + " ERROR AT " + nextURL + "\n");
 
                             int errorCode = (int)res.StatusCode;
 
                             if (!httpErrors.ContainsKey(nextURL))
                             {
                                 httpErrors.Add(nextURL, errorCode.ToString());
-                                helpers.PostError(nextURL, errorCode.ToString());
+                                //helpers.PostError(nextURL, errorCode.ToString());
                             }
                         }
                         else
                         {
-                            Console.WriteLine(nextURL + " IS THROWING AN UNSPECIFIED ERROR");
-                            Console.WriteLine("UNSPECIFIED ERROR: " + ex.StackTrace);
+                            //Console.WriteLine(nextURL + " IS THROWING AN UNSPECIFIED ERROR");
+                            //Console.WriteLine("UNSPECIFIED ERROR: " + ex.StackTrace);
 
                             if (!httpErrors.ContainsKey(nextURL))
                             {
                                 httpErrors.Add(nextURL, "UNSPECIFIED");
-                                helpers.PostError(nextURL, "UNSPECIFIED");
+                                //helpers.PostError(nextURL, "UNSPECIFIED");
                             }
                         }
                     }
 
                     if (!error)
                     {
+                        var nextTermCount = helpers.GetTerms(nextContent, stopwords);
+                        if(!invertedIndex.ContainsKey(nextURL))
+                            invertedIndex.Add(nextURL, nextTermCount);
                         List<string> links = helpers.GetLinks(nextURL, nextContent);
 
                         if (links.Count != 0)
                         {
-                            foreach (var link in links)
+                            foreach(var link in links)
                             {
+                                string urlType = helpers.CheckURL(link);
+                                Uri processedLink = null;
+
                                 if (!visitedUrls.ContainsKey(link))
                                 {
-                                    string urlType = helpers.CheckURL(link);
-                                    Uri processedLink = null;
-
                                     switch (urlType)
                                     {
                                         case "link":
                                             processedLink = new Uri(link);
 
+                                            if(!childLinks.Contains(processedLink.AbsoluteUri) && processedLink.AbsoluteUri != nextURL)
+                                                childLinks.Add(processedLink.AbsoluteUri);
+
                                             if (!helpers.CheckForDupedURL(processedLink.AbsoluteUri, urlFrontier) 
-                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, visitedUrls))
+                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, visitedUrls)
+                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, nextURL)
+                                                )
+                                            {
                                                 urlFrontier.Enqueue(processedLink.AbsoluteUri);
+                                            }
                                             break;
                                         case "resource":
                                             processedLink = new Uri(helpers.GetURLRoot(nextURL) + link);
 
+                                            if(!childLinks.Contains(processedLink.AbsoluteUri) && processedLink.AbsoluteUri != nextURL)
+                                                childLinks.Add(processedLink.AbsoluteUri);
+
                                             if (!helpers.CheckForDupedURL(processedLink.AbsoluteUri, urlFrontier) 
-                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, visitedUrls))
+                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, visitedUrls)
+                                                && !helpers.CheckForDupedURL(processedLink.AbsoluteUri, nextURL))
+                                            {
                                                 urlFrontier.Enqueue(processedLink.AbsoluteUri);
+                                            }
                                             break;
                                         case "filtered":
                                             //do nothing
@@ -110,9 +135,25 @@ namespace CS685HW3
                                                 if (!helpers.CheckForDupedURL(processedLink.AbsoluteUri, foundFiles))
                                                 {
                                                     foundFiles.Add(processedLink.AbsoluteUri, urlType);
-                                                    helpers.PostFile(processedLink.AbsoluteUri, urlType);
+                                                    //helpers.PostFile(processedLink.AbsoluteUri, urlType);
                                                 }
                                             }
+                                            break;
+                                    }
+                                }
+                                else
+                                {
+                                    switch(urlType)
+                                    {
+                                        case "link":
+                                            processedLink = new Uri(link);
+                                            if(!childLinks.Contains(processedLink.AbsoluteUri) && processedLink.AbsoluteUri != nextURL)
+                                                childLinks.Add(processedLink.AbsoluteUri);
+                                            break;
+                                        case "resource":
+                                            processedLink = new Uri(link);
+                                            if(!childLinks.Contains(processedLink.AbsoluteUri) && processedLink.AbsoluteUri != nextURL)
+                                                childLinks.Add(processedLink.AbsoluteUri);
                                             break;
                                     }
                                 }
@@ -125,14 +166,17 @@ namespace CS685HW3
                     if (!visitedUrls.ContainsKey(processedUrl.AbsoluteUri))
                     {
                         visitedUrls.Add(processedUrl.AbsoluteUri, DateTime.Now);
-                        helpers.PostPage(processedUrl.AbsoluteUri, DateTime.Now);
+                        //helpers.PostPage(processedUrl.AbsoluteUri, DateTime.Now);
                     }
+
+                    if(!webGraph.ContainsKey(processedUrl.AbsoluteUri))
+                        webGraph.Add(processedUrl.AbsoluteUri, childLinks);
                 }
 
                 DateTime finishedTime = DateTime.Now;
                 Console.WriteLine("Crawl started at " + startTime);
                 Console.WriteLine("Crawl finished at " + finishedTime);
-                helpers.PostEndTime(finishedTime);
+                //helpers.PostEndTime(finishedTime);
                 var elapsed = finishedTime.Subtract(startTime);
                 Console.WriteLine("Crawl duration: " + elapsed);
 
@@ -163,6 +207,12 @@ namespace CS685HW3
                 }
 
                 Console.WriteLine("\n Subdomain Count: " + subdomains.Count);
+
+                string webGraphJson = JsonSerializer.Serialize(webGraph);
+                File.WriteAllText("graph.json", webGraphJson);
+
+                string invertedIndexJson = JsonSerializer.Serialize(invertedIndex);
+                File.WriteAllText("index.json", invertedIndexJson);
             }
         }
     }
