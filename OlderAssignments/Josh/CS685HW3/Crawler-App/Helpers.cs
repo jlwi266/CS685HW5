@@ -94,12 +94,12 @@ namespace CS685HW3
 
                     foreach(var term in terms)
                     {
-                        if(!stopwords.Contains(term.ToLower()) && term.Trim() != "")
+                        if(term.Trim() != "")
                         {
                             var nextTerm = term.Trim();
                             nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
-                            if(nextTerm != "")
+                            if(!stopwords.Contains(term.ToLower()) && nextTerm != "")
                             {
                                 if(termCounts.ContainsKey(nextTerm))
                                 {
@@ -131,12 +131,12 @@ namespace CS685HW3
 
                 foreach(var term in terms)
                 {
-                    if(!stopwords.Contains(term.Text.ToLower()) && term.Text.Trim() != "")
+                    if(term.Text.Trim() != "")
                     {
                         var nextTerm = term.Text.Trim();
                         nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
-                        if(nextTerm != "")
+                        if(!stopwords.Contains(term.Text.ToLower()) && nextTerm != "")
                         {
                             if(termCounts.ContainsKey(nextTerm))
                             {
