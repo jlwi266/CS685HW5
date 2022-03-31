@@ -4,6 +4,8 @@ using HtmlAgilityPack;
 using System.Text.RegularExpressions;
 using System.Net.Http;
 using System.Text;
+using System.Linq;
+using UglyToad.PdfPig;
 
 namespace CS685HW3
 {    
@@ -58,31 +60,31 @@ namespace CS685HW3
                 doc.LoadHtml(content);
 
                 var pNodes = doc.DocumentNode.SelectNodes("//p/text()");
-                termCounts = processNodes(termCounts, pNodes, stopwords);
+                termCounts = ProcessNodes(termCounts, pNodes, stopwords);
 
                 var h1Nodes = doc.DocumentNode.SelectNodes("//h1/text()");
-                termCounts = processNodes(termCounts, h1Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h1Nodes, stopwords);
 
                 var h2Nodes = doc.DocumentNode.SelectNodes("//h2/text()");
-                termCounts = processNodes(termCounts, h2Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h2Nodes, stopwords);
 
                 var h3Nodes = doc.DocumentNode.SelectNodes("//h3/text()");
-                termCounts = processNodes(termCounts, h3Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h3Nodes, stopwords);
 
                 var h4Nodes = doc.DocumentNode.SelectNodes("//h4/text()");
-                termCounts = processNodes(termCounts, h4Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h4Nodes, stopwords);
 
                 var h5Nodes = doc.DocumentNode.SelectNodes("//h5/text()");
-                termCounts = processNodes(termCounts, h5Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h5Nodes, stopwords);
 
                 var h6Nodes = doc.DocumentNode.SelectNodes("//h6/text()");
-                termCounts = processNodes(termCounts, h6Nodes, stopwords);
+                termCounts = ProcessNodes(termCounts, h6Nodes, stopwords);
             }
 
             return termCounts;
         }
 
-        public Dictionary<string, int> processNodes(Dictionary<string, int> termCounts, HtmlNodeCollection nodes, List<string> stopwords)
+        public Dictionary<string, int> ProcessNodes(Dictionary<string, int> termCounts, HtmlNodeCollection nodes, List<string> stopwords)
         {
             if(nodes != null)
             {
@@ -92,10 +94,50 @@ namespace CS685HW3
 
                     foreach(var term in terms)
                     {
-                        if(!stopwords.Contains(term) && term.Trim() != "")
+                        if(!stopwords.Contains(term.ToLower()) && term.Trim() != "")
                         {
                             var nextTerm = term.Trim();
+                            nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
+                            if(nextTerm != "")
+                            {
+                                if(termCounts.ContainsKey(nextTerm))
+                                {
+                                    termCounts[nextTerm] += 1;
+                                }
+                                else
+                                {
+                                    termCounts.Add(nextTerm, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return termCounts;
+        }
+
+        public Dictionary<string, int> GetPDFTerms(Byte[] data, List<string> stopwords)
+        {
+            PdfDocument doc = PdfDocument.Open(data);
+            Dictionary<string, int> termCounts = new Dictionary<string, int>();
+
+            var pages = doc.GetPages();
+
+            foreach(var page in pages)
+            {
+                var terms = page.GetWords();
+
+                foreach(var term in terms)
+                {
+                    if(!stopwords.Contains(term.Text.ToLower()) && term.Text.Trim() != "")
+                    {
+                        var nextTerm = term.Text.Trim();
+                        nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
+
+                        if(nextTerm != "")
+                        {
                             if(termCounts.ContainsKey(nextTerm))
                             {
                                 termCounts[nextTerm] += 1;

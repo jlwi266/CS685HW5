@@ -135,7 +135,23 @@ namespace CS685HW3
                                                 if (!helpers.CheckForDupedURL(processedLink.AbsoluteUri, foundFiles))
                                                 {
                                                     foundFiles.Add(processedLink.AbsoluteUri, urlType);
-                                                    //helpers.PostFile(processedLink.AbsoluteUri, urlType);
+
+                                                    try
+                                                    {
+                                                        if(processedLink.AbsoluteUri.ToUpper().Contains("PDF"))
+                                                        {
+                                                            var pdfBytes = client.DownloadData(processedLink.AbsoluteUri);
+                                                            var termCount = helpers.GetPDFTerms(pdfBytes, stopwords);
+
+                                                            if(!invertedIndex.ContainsKey(processedLink.AbsoluteUri))
+                                                                invertedIndex.Add(processedLink.AbsoluteUri, termCount);
+                                                        }
+                                                    }
+                                                    catch(Exception ex)
+                                                    {
+                                                        Console.WriteLine("Error getting content from pdf: " + processedLink.AbsoluteUri);
+                                                        Console.WriteLine(ex.StackTrace);
+                                                    }
                                                 }
                                             }
                                             break;
