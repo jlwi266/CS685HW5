@@ -69,8 +69,13 @@ _.forEach(Object.keys(matrixRawData), (key) => {
 
 finalRanks = _.orderBy(finalRanks, finalRanks.values(), 'desc');
 rankFileName = '../../../../Outputs/pageRank.json';
+sortedRanks = {}
 
-fs.writeFile(rankFileName, JSON.stringify(finalRanks, null, 1), (err) => {
+_.forEach(finalRanks, obj => {
+    sortedRanks[Object.keys(obj)[0]] = Object.values(obj)[0]
+})
+
+fs.writeFile(rankFileName, JSON.stringify(sortedRanks, null, 1), (err) => {
     if(err)
     {
         console.log("error writing final ranks");
