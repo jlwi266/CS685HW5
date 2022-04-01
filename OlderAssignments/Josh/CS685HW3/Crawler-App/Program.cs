@@ -225,10 +225,10 @@ namespace CS685HW3
                 Console.WriteLine("\n Subdomain Count: " + subdomains.Count);
 
                 string webGraphJson = JsonSerializer.Serialize(webGraph);
-                File.WriteAllText("graph.json", webGraphJson);
+                File.WriteAllText("../../../../Outputs/graph.json", webGraphJson);
 
                 string invertedIndexJson = JsonSerializer.Serialize(invertedIndex);
-                File.WriteAllText("index.json", invertedIndexJson);
+                File.WriteAllText("../../../../Outputs/index.json", invertedIndexJson);
             }
         }
     }
