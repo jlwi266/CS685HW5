@@ -6,22 +6,6 @@ import json
 
 # Importing required module
 import numpy as np
-from nltk.tokenize import word_tokenize
-
-import nltk
-import ssl
-#
-# try:
-#     _create_unverified_https_context = ssl._create_unverified_context
-# except AttributeError:
-#     pass
-# else:
-#     ssl._create_default_https_context = _create_unverified_https_context
-#
-# nltk.download()
-
-# Python program to read
-# json file
 
 # Opening JSON file
 f = open('test_index.json')
@@ -29,9 +13,6 @@ f = open('test_index.json')
 # returns JSON object as
 # a dictionary
 data = json.load(f)
-
-# Iterating through the json
-# list
 
 # Closing file
 f.close()
@@ -57,9 +38,7 @@ for word in word_set:
     index_dict[word] = i
     i += 1
 
-print("test")
 # Create a count dictionary
-
 def count_dict():
     word_count = {}
     for word in word_set:
@@ -83,10 +62,11 @@ def inverse_doc_freq(word):
         word_occurance = 1
 
     #     Deal with equal number of occurences and documents
-    if total_documents + 1 == word_occurance:
-        return 1
-    else:
-        return np.log(total_documents / word_occurance)
+    # TODO: Deal with more word occurances than documents in a set
+    # if total_documents + 1 == word_occurance:
+    #     return 1
+    # else:
+    return np.log(total_documents / word_occurance)
 
 # Now you combine the TFIDF Functions
 def tf_idf():
@@ -100,20 +80,18 @@ def tf_idf():
             else:
                 value = data[url].get(term) * idf
                 tf_idf_vec[index_dict[term]] = value
-    print(index_dict)
-    print(tf_idf_vec)
     return tf_idf_vec
 
-
-# term frequency
-if __name__ == "__main__":
-    vectors = []
-    vectors.append(tf_idf())
-    print(vectors[0])
-
-
-# I left off with the ability to load the indexing now I am trying to create a word count for the document
-# this will help me in my reverse indexing
-# I am basically following the python tutorial but I am reformatting the input to work for our indexing
-
-
+def formatOutput(vectors):
+    TFIDFOutput = {}
+    # This puts all the data outputted in a digestable dictionary relationship
+    #  {URL1:{Term1:TFIDF, Term2: TFIDF, Term3:TFIDF},URL2:{Term1:TFIDF, Term2: TFIDF}}
+    for url in data:
+        tmpTermScore = {}
+        for indx, word in enumerate(index_dict):
+            for term in data[url]:
+                if term == word:
+                    tmpTermScore[word] = str(vectors[0][indx])
+            if tmpTermScore:
+                TFIDFOutput[url] = tmpTermScore
+    return TFIDFOutput
