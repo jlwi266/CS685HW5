@@ -50,7 +50,7 @@ namespace CS685HW3
             return discoveredLinks;
         }
 
-        public Dictionary<string, int> GetTerms(string content, List<string> stopwords)
+        public Dictionary<string, int> GetTerms(string content, Uri uri, List<string> stopwords)
         {
             HtmlDocument doc = new HtmlDocument();
             Dictionary<string, int> termCounts = new Dictionary<string, int>();
@@ -81,6 +81,8 @@ namespace CS685HW3
                 termCounts = ProcessNodes(termCounts, h6Nodes, stopwords);
             }
 
+            termCounts = ProcessUrlTerms(termCounts, uri, stopwords);
+
             return termCounts;
         }
 
@@ -96,7 +98,7 @@ namespace CS685HW3
                     {
                         if(term.Trim() != "")
                         {
-                            var nextTerm = term.Trim();
+                            var nextTerm = term.Trim().ToUpper();
                             nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
                             if(!stopwords.Contains(term.ToLower()) && nextTerm != "")
@@ -118,7 +120,7 @@ namespace CS685HW3
             return termCounts;
         }
 
-        public Dictionary<string, int> GetPDFTerms(Byte[] data, List<string> stopwords)
+        public Dictionary<string, int> GetPDFTerms(Byte[] data, Uri uri, List<string> stopwords)
         {
             PdfDocument doc = PdfDocument.Open(data);
             Dictionary<string, int> termCounts = new Dictionary<string, int>();
@@ -133,7 +135,7 @@ namespace CS685HW3
                 {
                     if(term.Text.Trim() != "")
                     {
-                        var nextTerm = term.Text.Trim();
+                        var nextTerm = term.Text.Trim().ToUpper();
                         nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
                         if(!stopwords.Contains(term.Text.ToLower()) && nextTerm != "")
@@ -146,6 +148,37 @@ namespace CS685HW3
                             {
                                 termCounts.Add(nextTerm, 1);
                             }
+                        }
+                    }
+                }
+            }
+
+            termCounts = ProcessUrlTerms(termCounts, uri, stopwords);
+
+            return termCounts;
+        }
+
+        public Dictionary<string, int> ProcessUrlTerms(Dictionary<string, int> termCounts, Uri uri, List<string> stopwords)
+        {
+            char[] delimiters = {'/', '-', '_', '?', '='};
+            var urlTerms = uri.AbsolutePath.Split(delimiters);
+
+            foreach(var term in urlTerms)
+            {
+                if(term.Trim() != "")
+                {
+                    var nextTerm = term.Trim().ToUpper();
+                    nextTerm = new string(nextTerm.ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
+
+                    if(!stopwords.Contains(term.ToLower()) && nextTerm != "")
+                    {
+                        if(termCounts.ContainsKey(nextTerm))
+                        {
+                            termCounts[nextTerm] += 1;
+                        }
+                        else
+                        {
+                            termCounts.Add(nextTerm, 1);
                         }
                     }
                 }

@@ -3,6 +3,7 @@
 # https://www.askpython.com/python/examples/tf-idf-model-from-scratch
 
 import json
+import os
 
 # Importing required module
 import numpy as np
@@ -57,7 +58,7 @@ word_count = count_dict()
 # Define a function to caluculate IDF
 def inverse_doc_freq(word):
     try:
-        word_occurance = word_count[word] + 1
+        word_occurance = word_count[word]
     except:
         word_occurance = 1
 
@@ -66,7 +67,7 @@ def inverse_doc_freq(word):
     # if total_documents + 1 == word_occurance:
     #     return 1
     # else:
-    return np.log(total_documents / word_occurance)
+    return np.log10(total_documents / word_occurance)
 
 # Now you combine the TFIDF Functions
 def tf_idf():
@@ -78,7 +79,7 @@ def tf_idf():
             if idf == 1:
                 tf_idf_vec[index_dict[term]] = 1
             else:
-                value = data[url].get(term) * idf
+                value = data[url][term] * idf
                 tf_idf_vec[index_dict[term]] = value
     return tf_idf_vec
 

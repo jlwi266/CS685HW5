@@ -1,3 +1,5 @@
+import FinalScore
+import TFIDFQuery
 
 def CheckForStopWords(input):
     lines = ' '
@@ -10,10 +12,21 @@ def CheckForStopWords(input):
                     input.remove(term)
 
 
-def UserInputLoop():
+def UserInputLoop(rankings):
     while 1 == 1:
         val = input("Enter your query: ")
-        queryInput = val.split(' ')
+        queryInput = val.upper().split(' ')
         CheckForStopWords(queryInput)
         print("Searching for " + val)
         print("Loading...")
+        finalScores = FinalScore.get_scores(rankings, TFIDFQuery.ProcessQuery(queryInput))
+        counter = 1
+        if(finalScores == {}):
+            print("No matches were found for the query.")
+        else:
+            for score in finalScores:
+                index = finalScores.index(score)
+                print(str(counter) + ". " + str(finalScores[index]))
+                counter += 1
+
+

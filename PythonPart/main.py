@@ -8,9 +8,8 @@ if __name__ == "__main__":
     TFIDFRankings = {}
     vectors.append(TFIDF.tf_idf())
     TFIDFRankings = TFIDF.formatOutput(vectors)
-    print(TFIDFRankings)
 
-    UserQuery.UserInputLoop()
+    UserQuery.UserInputLoop(TFIDFRankings)
 
 
 

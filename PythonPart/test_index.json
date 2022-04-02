@@ -1,16 +1,16 @@
 {
-  "https://www.engr.uky.edu": {
+  "https://www.engr.uky.edu/": {
     "98%": 1,
     "90%": 5
   },
   "https://www.engr.uky.edu/search": {
-    "Stay": 1,
-    "Connected": 1,
+    "STAY": 1,
+    "CONNECTED": 1,
     "351": 1,
     "90%": 5
   },
   "https://www.engr.uky.edu/research-faculty/departments/biomedical-engineering": {
-    "Only": 1,
+    "ONLY": 1,
     "$59,015": 1,
     "$7M": 1,
     "90%": 6

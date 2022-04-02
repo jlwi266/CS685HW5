@@ -78,9 +78,9 @@ namespace CS685HW3
 
                     if (!error)
                     {
-                        var nextTermCount = helpers.GetTerms(nextContent, stopwords);
-                        if(!invertedIndex.ContainsKey(nextURL))
-                            invertedIndex.Add(nextURL, nextTermCount);
+                        var nextTermCount = helpers.GetTerms(nextContent, new Uri(nextURL), stopwords);
+                        if(!invertedIndex.ContainsKey(new Uri(nextURL).AbsoluteUri))
+                            invertedIndex.Add(new Uri(nextURL).AbsoluteUri, nextTermCount);
                         List<string> links = helpers.GetLinks(nextURL, nextContent);
 
                         if (links.Count != 0)
@@ -141,7 +141,7 @@ namespace CS685HW3
                                                         if(processedLink.AbsoluteUri.ToUpper().Contains("PDF"))
                                                         {
                                                             var pdfBytes = client.DownloadData(processedLink.AbsoluteUri);
-                                                            var termCount = helpers.GetPDFTerms(pdfBytes, stopwords);
+                                                            var termCount = helpers.GetPDFTerms(pdfBytes, processedLink, stopwords);
 
                                                             if(!invertedIndex.ContainsKey(processedLink.AbsoluteUri))
                                                                 invertedIndex.Add(processedLink.AbsoluteUri, termCount);
