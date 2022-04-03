@@ -4,12 +4,13 @@
 
 import json
 import os
+import copy
 
 # Importing required module
 import numpy as np
 
 # Opening JSON file
-f = open('test_index.json')
+f = open('../Outputs/index.json')
 
 # returns JSON object as
 # a dictionary
@@ -18,81 +19,42 @@ data = json.load(f)
 # Closing file
 f.close()
 
-# Preprocessing the index data
-sentences = []
-word_set = []
-
-for url in data:
-    for term in data[url]:
-        if term not in word_set:
-            word_set.append(term)
-
-# Set of vocab
-word_set = set(word_set)
-# Total documents in our corpus
 total_documents = len(data)
+word_count = {}
 
-# Create an index for each word in our vocab
-index_dict = {} #Dictionary for storing index for each word
-i = 0
-for word in word_set:
-    index_dict[word] = i
-    i += 1
+print('Building term matrix...')
 
-# Create a count dictionary
-def count_dict():
-    word_count = {}
-    for word in word_set:
-        word_count[word] = 0
-        for url in data:
-            for term in data[url]:
-                if term == word:
-                    word_count[term] += 1
-    return word_count
+for doc in data:
+    for docTerm in data[doc]:
+        if not docTerm in word_count:
+            word_count[docTerm] = 1
+        else:
+            word_count[docTerm] += 1
 
-word_count = count_dict()
+print('Term matrix ready!')
 
-# Define a function to calculate Term Frequency
-# This is already defined in the indexed data structure
+def GetTFIDF():
+    result = copy.deepcopy(data)
 
-# Define a function to caluculate IDF
-def inverse_doc_freq(word):
-    try:
-        word_occurance = word_count[word]
-    except:
-        word_occurance = 1
+    for doc in result:
+        for docTerm in result[doc]:
+            idf = np.log10(total_documents/word_count[docTerm])
+            result[doc][docTerm] = data[doc][docTerm] * idf
 
-    #     Deal with equal number of occurences and documents
-    # TODO: Deal with more word occurances than documents in a set
-    # if total_documents + 1 == word_occurance:
-    #     return 1
-    # else:
-    return np.log10(total_documents / word_occurance)
+    return result
 
-# Now you combine the TFIDF Functions
-def tf_idf():
-    tf_idf_vec = np.zeros((len(word_set),))
-    for url in data:
-        for term in data[url]:
-            idf = inverse_doc_freq(term)
+def ProcessQuery(query):
 
-            if idf == 1:
-                tf_idf_vec[index_dict[term]] = 1
-            else:
-                value = data[url][term] * idf
-                tf_idf_vec[index_dict[term]] = value
-    return tf_idf_vec
+    result = {}
 
-def formatOutput(vectors):
-    TFIDFOutput = {}
-    # This puts all the data outputted in a digestable dictionary relationship
-    #  {URL1:{Term1:TFIDF, Term2: TFIDF, Term3:TFIDF},URL2:{Term1:TFIDF, Term2: TFIDF}}
-    for url in data:
-        tmpTermScore = {}
-        for indx, word in enumerate(index_dict):
-            for term in data[url]:
-                if term == word:
-                    tmpTermScore[word] = str(vectors[0][indx])
-            if tmpTermScore:
-                TFIDFOutput[url] = tmpTermScore
-    return TFIDFOutput
+    for queryTerm in query: 
+        if not queryTerm in word_count:
+            word_count[queryTerm] = 1
+        else:
+            word_count[queryTerm] += 1
+
+    for term in query:
+        idf = np.log10(total_documents/word_count[term])
+        result[term] = query.count(term) * idf
+
+    return result

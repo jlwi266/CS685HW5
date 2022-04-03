@@ -1,3 +1,4 @@
+from ast import Pass
 import math
 import json
 import operator
@@ -34,11 +35,20 @@ def get_scores(scores, query):
                 queryValue = queryTermScores/queryNormalizer
 
                 nextRelevanceScore = queryValue * docValues[url]
-                finalScore = (nextRelevanceScore * 0.6) + (pageRank[url] * 100 * 0.4)
+                try:
+                    finalScore = (nextRelevanceScore * 0.6) + (pageRank[url] * 100 * 0.4)
+                except:
+                    #PDFs don't have pagerank
+                    finalScore = (nextRelevanceScore * 0.6)
                 docFinalScores[url] = finalScore
 
             else:
-                docFinalScores[url] = pageRank[url]
+                try:
+                    docFinalScores[url] = pageRank[url]
+                except Exception:
+                    #do nothing, only PDFs don't have pagerank so we ignore them.
+                    pass
+                    
 
         sortedScores = sorted(docFinalScores.items(), key=lambda x:x[1], reverse=True)
     else:
